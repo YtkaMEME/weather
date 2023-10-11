@@ -1,0 +1,79 @@
+header{
+    background: #D9D9D9;
+    height: 104px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainLogo{
+    margin-right: 22px;
+}
+
+.mainLogo h1{
+    color: #000;
+    font-family: Inter, serif;
+    font-size: 14.422px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#inputSearch{
+    margin-left: 5px;
+    width: 482px;
+    height: 42px;
+
+    border-radius: 12px;
+    border: 0px solid #000;
+    background: #FFF;
+}
+
+#inputSearch:focus{
+    outline: none;
+}
+
+#searchBox {
+    width: 628px;
+    height: 44px;
+
+    border-radius: 12px;
+    border: 0px solid #000;
+    background: #FFF;
+}
+
+#searchBox{
+    position: relative;
+}
+
+#buttonSearch{
+    position: absolute;
+    top: 10px;
+    left: 492px;
+
+    width: 120px;
+    height: 24.906px;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    background: #B9DDFD;
+
+    color: #000000;
+    font-family: Inter, serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input[type=submit],input[type=reset] {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none; /* optional */
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+}
