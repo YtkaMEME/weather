@@ -1,10 +1,11 @@
 import conditionImg from "./conditionImg.json" assert { type: 'json' };
 
 async function getWeather(apiKey, city){
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`,{
+    let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`,{
         referrerPolicy: "no-referrer-when-downgrade"
     });
 
+    
     if(!response.ok){
         return;
     }
@@ -43,6 +44,8 @@ function closeWeatherCard(event){
 function selectImg(condition, isDay){
     let src = '';
     let img = conditionImg[condition];
+
+    console.log(condition);
 
     if(isDay){
         src = `./icons/day/${img}`

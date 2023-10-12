@@ -1,7 +1,7 @@
 {
   "Sunny": "clearSun.svg",
   "Clear": "sunnyNight.svg",
-  "Partly Cloudy": "ligthClody.svg",
+  "Partly cloudy": "ligthClody.svg",
   "Cloudy": "cloudy.svg",
   "Overcast": "cloudy.svg",
   "Mist": "fog.svg",
