@@ -1,9 +1,7 @@
 import conditionImg from "./conditionImg.json" assert { type: 'json' };
 
 async function getWeather(apiKey, city){
-    let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`,{
-        referrerPolicy: "no-referrer-when-downgrade"
-    });
+    let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
 
     
     if(!response.ok){
