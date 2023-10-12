@@ -1,7 +1,9 @@
 import conditionImg from "./conditionImg.json" assert { type: 'json' };
 
 async function getWeather(apiKey, city){
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
+    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`,{
+        referrerPolicy: "no-referrer-when-downgrade"
+    });
 
     if(!response.ok){
         return;
@@ -21,6 +23,21 @@ async function getWeather(apiKey, city){
     let isDay = weatherObj.current.is_day;
 
     return  [temp, wind, humidity, condition, isDay];
+}
+
+function closeWeatherCard(event){
+
+    if(event.ctrlKey){
+        let weatherCards = document.querySelectorAll('.weatherCard');
+
+        weatherCards.forEach((item)=>item.remove());
+
+        return;
+    }
+
+    let weatherCard = event.target.parentNode;
+
+    weatherCard.remove();
 }
 
 function selectImg(condition, isDay){
@@ -47,6 +64,15 @@ async function createWeatherCard (city){
 
     let weatherCard = document.createElement('div');
     weatherCard.classList.add('weatherCard');
+
+    let xImg = document.createElement('img');
+    xImg.src = './icons/X.svg';
+    xImg.alt = 'x';
+    xImg.classList.add('x');
+
+    weatherCard.append(xImg);
+
+    xImg.addEventListener('click', closeWeatherCard);
 
     let iconsCard = document.createElement('div');
     iconsCard.classList.add('iconsCard');
