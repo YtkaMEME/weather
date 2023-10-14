@@ -3,6 +3,8 @@
 
 @import "header.css";
 @import "weather.css";
+@import "./mobileCss/mobile425.css";
+@import "./mobileCss/mobile1024.css";
 
 body{
     display: flex;

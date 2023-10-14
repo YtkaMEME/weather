@@ -5,7 +5,7 @@ async function getWeather(apiKey, city){
 
     
     if(!response.ok){
-        return;
+        return [0, 0, 0, 0, 0];
     }
 
     let weatherObj = await response.json();
@@ -43,8 +43,6 @@ function selectImg(condition, isDay){
     let src = '';
     let img = conditionImg[condition];
 
-    console.log(condition);
-
     if(isDay){
         src = `./icons/day/${img}`
     }else {
@@ -58,10 +56,6 @@ async function createWeatherCard (city){
     let apiKey = '9a42fb754a67409e80962042231110';
 
     let [temp, wind, humidity, condition, isDay] = await getWeather(apiKey, city);
-
-    if(!temp){
-        return;
-    }
 
     let weatherCard = document.createElement('div');
     weatherCard.classList.add('weatherCard');
@@ -83,10 +77,11 @@ async function createWeatherCard (city){
     degree.textContent = temp;
 
     let img = document.createElement('img');
-    img.src = selectImg(condition, isDay);
+
+    img.src = !temp? './icons/ERROR.svg' : img.src = selectImg(condition, isDay);
+
     img.alt = 'degreeIcon';
     img.classList.add('degreeIcon');
-
     iconsCard.append(degree);
     iconsCard.append(img);
     weatherCard.append(iconsCard);
@@ -96,7 +91,7 @@ async function createWeatherCard (city){
 
     let cityH3 = document.createElement('h3');
     cityH3.id = 'city';
-    cityH3.textContent = city;
+    cityH3.textContent = !temp ? 'ERROR' : city;
 
     let spanWind = document.createElement('span');
     spanWind.id = 'wind';
