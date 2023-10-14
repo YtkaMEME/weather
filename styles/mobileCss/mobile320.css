@@ -1,4 +1,4 @@
-@media (max-width: 425px) and (min-width: 321px){
+@media (max-width: 320px){
 
     /*header*/
     header{
@@ -6,7 +6,7 @@
         top: 0;
         position: sticky;
 
-        height: 142px;
+        height: 139px;
         flex-direction: column;
 
         justify-content: unset;
@@ -16,7 +16,7 @@
     .mainLogo{
         margin: 0;
 
-        margin-top: 11px;
+        margin-top: 12px;
 
         display: flex;
         flex-direction: row;
@@ -36,20 +36,21 @@
 
     #inputSearch{
         margin-left: 5px;
-        max-width: 245px;
+        width: 205px;
+        height: 36px;
     }
 
     #searchBox {
-        max-width: 344px;
-        height: 45px;
+        width: 292px;
+        height: 38.198px;
     }
 
     #buttonSearch{
-        top: 10px;
-        left: 255px;
+        top: 8.49px;
+        left: 216.45px;
 
-        width: 73px;
-        height: 25px;
+        width: 61.965px;
+        height: 21.221px;
     }
 
     /*weather card*/
