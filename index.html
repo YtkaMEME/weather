@@ -6,24 +6,24 @@
     <title>MEM WEATHER</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="shortcut icon" href="#">
-    <link rel="icon" href="./icons/logo.svg">
+    <link rel="icon" href="./icons/logo.png">
 </head>
 <body>
 
 <header>
-    <div class="mainLogo">
-        <img src="./icons/logo.svg" alt="mainLogo">
-        <h1>MEM WEATHER</h1>
-    </div>
+    <div class="mainLogo"></div>
 
     <form class="search">
         <div id="searchBox">
             <input type="text" name="search" id="inputSearch" placeholder="Введите город">
-            <input id="buttonSearch" type="submit" name="submit" value="select">
+            <input id="buttonSearch" type="submit" name="submit" value="SEARCH">
         </div>
     </form>
 </header>
 
+<div id="main"></div>
+
 <script type="module" src="./scripts/main.js"></script>
+<script type="module" src="logoAnimation/animation.js"></script>
 </body>
 </html>

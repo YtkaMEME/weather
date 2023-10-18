@@ -1,68 +1,62 @@
 header{
-    background: #D9D9D9;
-    height: 104px;
-
+    width: 100%;
     display: flex;
+    padding: 12px;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+
+    flex-wrap: wrap;
+    align-content: center;
+
+    background-color: #F7F7F7;
 }
 
 .mainLogo{
-    margin-right: 22px;
+    margin: 0;
+    width: 216px;
+    height: 60px;
 }
 
-.mainLogo h1{
-    color: #000;
-    font-family: Inter, serif;
-    font-size: 14.422px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+#searchBox {
+    display: flex;
+    width: 620px;
+    height: 31px;
+    gap: 10px;
+    padding: 4px 4px 4px 12px;
+
+    border-radius: 12px;
+    background: #EBEBEB;
 }
 
 #inputSearch{
-    margin-left: 5px;
-    width: 482px;
-    height: 42px;
+    padding: 0;
+    width: 501px;
+    height: 31px;
 
     border-radius: 12px;
     border: 0px solid #000;
-    background: #FFF;
+    background: #EBEBEB;
 }
 
 #inputSearch:focus{
     outline: none;
 }
 
-#searchBox {
-    position: relative;
-
-    width: 628px;
-    height: 44px;
-
-    border-radius: 12px;
-    border: 0px solid #000;
-    background: #FFF;
-}
-
 #buttonSearch{
-    position: absolute;
-    top: 10px;
-    left: 492px;
+    width: 115px;
+    height: 31px;
 
-    width: 120px;
-    height: 24.906px;
-    flex-shrink: 0;
+    border-radius: 8px;
+    background: #7D04F6;
 
-    border-radius: 12px;
-    background: #B9DDFD;
-
-    color: #000000;
-    font-family: Inter, serif;
+    color: #FFF;
+    font-family: Noto Sans, serif;
     font-size: 11px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
+    text-align: center;
 }
 
 input[type=submit],input[type=reset] {
@@ -74,4 +68,28 @@ input[type=submit],input[type=reset] {
     color: inherit;
     font-size: inherit;
     padding: 0;
+}
+
+/*recolor placeholder*/
+
+#inputSearch ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #000;
+}
+#inputSearch :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000;
+    opacity:  1;
+}
+#inputSearch ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000;
+    opacity:  1;
+}
+#inputSearch :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000;
+}
+#inputSearch ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000;
+}
+
+#inputSearch ::placeholder { /* Most modern browsers support this now. */
+    color: #000;
 }

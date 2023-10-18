@@ -1,84 +1,122 @@
 .weatherCard{
     position: relative;
 
-    margin: 41px auto 0;
-    width: 454.555px;
-    height: 411px;
+    width: 270px;
+    height: 122px;
 
-    border-radius: 12px;
-    background: linear-gradient(180deg, #D9D9D9 -61.68%, #1E1E1E 103.53%);
+    padding: 8px 54px 8px 16px;
 
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+
+    border-radius: 16px;
 }
 
-.iconsCard{
-    margin: 23px auto 0;
-
-    width: 324px;
-    height: 219px;
-
-    display: grid;
-    grid-template-columns: 100px 214px;
-    grid-column-gap: 21px;
+.sunny{
+    background: linear-gradient(180deg, #878787 0%, #EC7824 100%);
 }
 
-.iconsCard h3{
+.cloudy{
+    background: linear-gradient(180deg, #878787 0%, #262E72 100%);
+}
+
+.rainy{
+    background: linear-gradient(180deg, #878787 0%, #212121 100%);
+}
+
+.city{
+    overflow: hidden;
     color: #FFF;
-    font-family: Inter, serif;
-    font-size: 70px;
+
+    text-overflow: ellipsis;
+
+    font-family: Noto Sans, serif;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
-
-    text-align: center;
-    margin-top: 67px;
-}
-
-.iconsCard img{
-    width: 214px;
-    height: 219px;
 }
 
 .info{
-    margin: 24px auto 0;
-    width: 253px;
-    height: 103px;
+    display: grid;
 
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 78px 142px 86px;
+
+
+    width: 306px;
+    height: 89px;
 }
 
-.info h3{
+.about{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about div{
     color: #FFF;
-    font-family: Inter, serif;
-    font-size: 30px;
+
+    font-family: Noto Sans, serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.about span{
+    color: #FFF;
+
+    font-family: Noto Sans, serif;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
+}
+
+.degree{
+
+    margin-top: 20px;
+
+    color: #FFF;
+
+    font-family: Noto Sans, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
     line-height: normal;
 
     text-align: center;
 }
 
-.info span{
-    color: #FFF;
-    font-family: Inter, serif;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    margin-top: 12px;
+.degreeIcon{
+    width: 86px;
+    height: 89px;
 }
 
 .x{
     position: absolute;
 
-    width: 21px;
-    height: 21px;
+    width: 16px;
+    height: 16px;
 
-    top: 21px;
-    left: 412px;
+    top: 16px;
+    left: 308px;
 
     cursor: pointer;
+}
+
+.background {
+    width: 204px;
+    height: 211px;
+
+    position: absolute;
+    left: 68px;
+
+    top: -37px;
+
+    opacity: 0.1;
+    filter: blur(8px);
 }
