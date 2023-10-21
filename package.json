@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "lottie-web": "^5.12.2"
+    "install": "^0.13.0",
+    "lottie-web": "^5.12.2",
+    "whatwg-fetch": "^3.6.19"
   }
 }

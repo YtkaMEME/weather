@@ -1,5 +1,11 @@
 @media (max-width: 426px) and (min-width: 321px){
 
+    header{
+        z-index: 5;
+        top: 0;
+        position: sticky
+    }
+
     #searchBox{
         width: 280px;
     }
