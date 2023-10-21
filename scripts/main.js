@@ -1,8 +1,8 @@
 import typeInfo from "./conditionImg.json" assert { type: 'json' };
-import 'whatwg-fetch'
+import {fetch} from "./polyfill/fetch.js";
 
 async function getWeather(apiKey, city){
-    let response = await window.fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
+    let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
 
     
     if(!response.ok){
